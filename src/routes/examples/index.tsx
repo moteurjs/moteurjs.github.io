@@ -8,7 +8,7 @@ export default component$(() => {
             <ul>
                 {Object.values(EXAMPLES).map(({ name, path }) => (
                     <li>
-                        <Link href={path} class="text-blue-500 hover:underline">
+                        <Link href={path} class="text-red-500 hover:underline">
                             {name}
                         </Link>
                     </li>

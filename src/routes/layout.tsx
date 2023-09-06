@@ -4,7 +4,7 @@ import { Link } from "@builder.io/qwik-city";
 export default component$(() => {
     return (
         <div class="m-2">
-            <Link href="/"><h1 class="font-black text-2xl">Moteur</h1></Link>
+            <Link href="/" class="transition-colors font-black text-2xl hover:text-red-500">Moteur</Link>
             <hr />
             <Slot />
         </div>

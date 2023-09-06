@@ -8,7 +8,7 @@ export default component$(() => {
                 <li>
                     <Link
                         href="./examples"
-                        class="text-blue-500 hover:underline"
+                        class="text-red-500 hover:underline"
                     >
                         Examples
                     </Link>
