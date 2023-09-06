@@ -4,7 +4,7 @@ import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
     return (
-        <>
+        <div class="m-2">
             <ul>
                 {Object.values(EXAMPLES).map(({ name, path }) => (
                     <li>
@@ -14,6 +14,6 @@ export default component$(() => {
                     </li>
                 ))}
             </ul>
-        </>
+        </div>
     );
 });

@@ -12,10 +12,12 @@ export default component$((props: ExamplePageProps) => {
     const gameName = loc.url.pathname.split("/").slice(-2, -1)[0];
 
     return (
-        <GamePlayer
-            src={`/_examples/${gameName}/index.html`}
-            width={props.example.width}
-            height={props.example.height}
-        />
+        <div class="grid justify-center mt-4">
+            <GamePlayer
+                src={`/_examples/${gameName}/index.html`}
+                width={props.example.width}
+                height={props.example.height}
+            />
+        </div>
     );
 });

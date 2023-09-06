@@ -3,7 +3,7 @@ import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
     return (
-        <>
+        <div class="m-2">
             <ul>
                 <li>
                     <Link
@@ -14,6 +14,6 @@ export default component$(() => {
                     </Link>
                 </li>
             </ul>
-        </>
+        </div>
     );
 });
