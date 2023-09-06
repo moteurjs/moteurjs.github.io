@@ -57,6 +57,27 @@ jobs:
                   name: build-example-planet
                   path: examples/planet/dist
                   retention-days: 1
+    build-flappy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  repository: moteurjs/flappy
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: "16.x"
+                  registry-url: "https://registry.npmjs.org"
+                  cache: "pnpm"
+            - run: pnpm install
+            - run: pnpm build
+            - uses: actions/upload-artifact@v3
+              with:
+                  name: build-example-flappy
+                  path: dist
+                  retention-days: 1
     deploy:
         runs-on: ubuntu-latest
         needs: [build-website, build-examples]
@@ -73,6 +94,10 @@ jobs:
               with:
                   name: build-example-planet
                   path: "_examples/planet"
+            - uses: actions/download-artifact@v3
+              with:
+                  name: build-example-flappy
+                  path: "_examples/flappy"
             - uses: actions/upload-pages-artifact@v2
               with:
                   path: "."
