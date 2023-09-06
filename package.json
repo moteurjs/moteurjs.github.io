@@ -1,0 +1,24 @@
+{
+    "name": "moteur-website",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "build": "vite build && vite build -c adapters/static/vite.config.ts",
+        "dev": "vite --mode ssr",
+        "format": "prettier --write .",
+        "qwik": "qwik"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+        "prettier": "^3.0.2",
+        "prettier-plugin-tailwindcss": "^0.5.4",
+        "tailwindcss": "^3.3.3",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.5"
+    },
+    "dependencies": {
+        "@builder.io/qwik": "^1.2.6",
+        "@builder.io/qwik-city": "^1.2.7",
+        "autoprefixer": "^10.4.15"
+    }
+}
