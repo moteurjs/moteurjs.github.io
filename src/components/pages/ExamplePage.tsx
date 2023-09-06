@@ -19,7 +19,12 @@ export default component$((props: ExamplePageProps) => {
                 height={props.example.height}
             />
             <div>
-                <Link class="text-red-500 hover:underline" href={props.example.githubLink}>GitHub</Link>
+                <Link
+                    class="text-red-500 hover:underline"
+                    href={props.example.githubLink}
+                >
+                    GitHub
+                </Link>
             </div>
         </div>
     );
